@@ -100,6 +100,12 @@ html {
     font-size: 16px;
 }
 
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 body {
     font-family: var(--font-primary);
     background-color: var(--bg-primary);
@@ -160,9 +166,27 @@ a:hover {
     }
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+}
+
 .section {
     padding: var(--spacing-3xl) 0;
     position: relative;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: var(--spacing-xl) 0;
+    }
 }
 
 .section-header {
@@ -180,9 +204,27 @@ a:hover {
     background-clip: text;
 }
 
+@media (max-width: 768px) {
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+}
+
 .section-subtitle {
     font-size: var(--font-size-lg);
     color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
 }
 
 /* ===================================
@@ -200,6 +242,13 @@ a:hover {
     cursor: pointer;
     transition: all var(--transition-base);
     text-decoration: none;
+}
+
+@media (max-width: 480px) {
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: var(--font-size-sm);
+    }
 }
 
 .btn-primary {
@@ -264,6 +313,12 @@ a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 0;
+}
+
+@media (max-width: 480px) {
+    .nav-wrapper {
+        padding: 0.75rem 0;
+    }
 }
 
 .logo {
@@ -543,6 +598,41 @@ a:hover {
     .name {
         font-size: var(--font-size-3xl);
     }
+    
+    .hero {
+        min-height: auto;
+        padding: 100px 0 var(--spacing-2xl);
+    }
+    
+    .hero-content {
+        gap: var(--spacing-xl);
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-description {
+        font-size: var(--font-size-base);
+    }
+    
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .name {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .greeting {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
 }
 
 .hero-subtitle {
@@ -573,6 +663,13 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-md);
     margin-bottom: var(--spacing-xl);
+}
+
+@media (max-width: 480px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
 }
 
 .stat-item {
@@ -608,9 +705,28 @@ a:hover {
     flex-wrap: wrap;
 }
 
+@media (max-width: 768px) {
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+}
+
 .hero-social {
     display: flex;
     gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .hero-social {
+        justify-content: center;
+    }
 }
 
 .hero-social a {
@@ -641,6 +757,12 @@ a:hover {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+    .image-wrapper {
+        max-width: 280px;
+    }
 }
 
 .image-glow {
@@ -788,6 +910,19 @@ a:hover {
     margin-bottom: var(--spacing-md);
 }
 
+@media (max-width: 768px) {
+    .about-heading {
+        font-size: var(--font-size-xl);
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-heading {
+        font-size: var(--font-size-lg);
+    }
+}
+
 .about-description {
     font-size: var(--font-size-base);
     color: var(--text-secondary);
@@ -809,6 +944,14 @@ a:hover {
     background: var(--bg-card);
     border-radius: var(--radius-md);
     transition: transform var(--transition-base);
+    font-size: var(--font-size-base);
+}
+
+@media (max-width: 480px) {
+    .highlight-item {
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-xs);
+    }
 }
 
 .highlight-item:hover {
@@ -824,6 +967,18 @@ a:hover {
     display: flex;
     gap: var(--spacing-md);
     flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .about-cta {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-cta {
+        flex-direction: column;
+    }
 }
 
 /* ===================================
@@ -1017,6 +1172,12 @@ a:hover {
     transition: transform var(--transition-base);
 }
 
+@media (max-width: 480px) {
+    .timeline-card {
+        padding: var(--spacing-md);
+    }
+}
+
 .timeline-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
@@ -1029,6 +1190,18 @@ a:hover {
 .position-title {
     font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-sm);
+}
+
+@media (max-width: 768px) {
+    .position-title {
+        font-size: var(--font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .position-title {
+        font-size: var(--font-size-lg);
+    }
 }
 
 .company-info {
@@ -1121,6 +1294,13 @@ a:hover {
     transition: all var(--transition-base);
 }
 
+@media (max-width: 480px) {
+    .filter-btn {
+        padding: 0.625rem 1.25rem;
+        font-size: var(--font-size-sm);
+    }
+}
+
 .filter-btn:hover {
     background: var(--bg-tertiary);
     color: var(--text-primary);
@@ -1172,6 +1352,12 @@ a:hover {
     width: 100%;
     height: 300px;
     overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .game-image {
+        height: 250px;
+    }
 }
 
 .game-image img {
@@ -1361,6 +1547,13 @@ a:hover {
     transition: all var(--transition-base);
 }
 
+@media (max-width: 480px) {
+    .contact-item {
+        padding: var(--spacing-md);
+        gap: var(--spacing-sm);
+    }
+}
+
 .contact-item:hover {
     transform: translateY(-3px);
     box-shadow: var(--shadow-md);
@@ -1377,6 +1570,14 @@ a:hover {
     font-size: 1.5rem;
     color: var(--text-inverse);
     flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
 }
 
 .contact-details h3 {
@@ -1463,6 +1664,16 @@ a:hover {
 @media (min-width: 768px) {
     .footer-content {
         grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        text-align: center;
+    }
+    
+    .footer-description {
+        margin: 0 auto;
     }
 }
 
